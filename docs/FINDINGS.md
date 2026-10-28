@@ -44,8 +44,16 @@ to ramp over ~13-45 frames (step fraction ≈ 0.54-0.61) while the default appli
 | id 2 NORMAL op-mode | 3 | 0.97 / 0.97 / 0.97 | 0 s |
 | id 2 CUSTOM op-mode | 3 | 0.99 / 0.99 / 0.99 | 0 s |
 
-Conclusion for now: **no AE setting tried so far makes the port ramp like the stock camera**; the earlier "gradual" results were an artefact of protocol/overlap, not a finding.
+Conclusion for now: **no AE setting tried so far has demonstrated a stock-like ramp under a matched stimulus**. Earlier gradual results did not reproduce; their cause is not established, and protocol, scene conditions and overlap are potential confounders.
 Lesson: never trust an A/B result with n=1 or from overlapped runs (see METHOD.md). The stock camera was driven with a different stimulus (UI slider), so even a gradual stock ramp is not a like-for-like reference.
+
+## 2026-10-28 — diagnostic build and measurement limits
+
+A diagnostic build added optional sampling of the existing YUV preview plane and optional public request-field switches. With no experiment selected, the new request switches leave the existing defaults unchanged. YUV is a separate processed stream, not raw sensor data and not necessarily identical to the OES pipeline.
+
+One exploratory default run with a smaller, instantaneous −0.5 to +0.5 EV stimulus gave a median exposure×ISO step fraction of 1.0 and a 10–90% rise within one sampled interval. This is n=1, not a replicated comparison against the previous build or a controlled physical-light stimulus. One 21-second static run detected no isolated flashes in YUV, OES or output; n=1 with no events cannot establish that the flicker is fixed or localize its cause.
+
+The previously observed differences between experimental rounds need not be caused by overlapping controllers or protocol alone: scene brightness and exposure conditions also differed. OES observations exclude only a cause exclusively downstream of the measured OES point, not all rendering or conversion causes. A stock UI swipe and an instantaneous request are not equivalent stimuli.
 
 ## Open questions
 - Does explicit antibanding or the CUSTOM operation mode also remove the isolated single-frame flashes at constant exposure, or only change the AE ramp?
