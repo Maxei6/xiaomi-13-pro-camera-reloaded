@@ -1,0 +1,14 @@
+*.apk
+*.dex
+*.so
+*.jks
+*.keystore
+*.mp4
+*.raw
+*.zip
+*.img
+*.env
+.secrets/
+work/
+out/
+__pycache__/

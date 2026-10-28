@@ -1,0 +1,554 @@
+[
+  {
+    "config": "v30-ae-custom5",
+    "runs": [],
+    "n": 0,
+    "invalid_runs": [],
+    "gain_step_fraction_median": null,
+    "gain_rise_frames_median": null,
+    "screen_step_fraction_median": null,
+    "screen_rise_s_median": null
+  },
+  {
+    "config": "v30-ae-default",
+    "runs": [
+      {
+        "run": "run1",
+        "lab_completed": true,
+        "sensor_frames": 660,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.9894847388358219,
+        "gain_rise_frames_median": 0,
+        "screen_step_fraction_median": 0.9882207243269744,
+        "screen_rise_s_median": 0.0
+      },
+      {
+        "run": "run2",
+        "lab_completed": true,
+        "sensor_frames": 659,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.9894847388358219,
+        "gain_rise_frames_median": 0,
+        "screen_step_fraction_median": 0.9882652135453288,
+        "screen_rise_s_median": 0.0
+      },
+      {
+        "run": "run3",
+        "lab_completed": true,
+        "sensor_frames": 660,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.9894847388358219,
+        "gain_rise_frames_median": 0,
+        "screen_step_fraction_median": 0.9860691640365142,
+        "screen_rise_s_median": 0.0
+      }
+    ],
+    "n": 3,
+    "invalid_runs": [],
+    "gain_step_fraction_median": 0.9894847388358219,
+    "gain_rise_frames_median": 0,
+    "screen_step_fraction_median": 0.9882207243269744,
+    "screen_rise_s_median": 0.0
+  },
+  {
+    "config": "v30-ae-fps30",
+    "runs": [
+      {
+        "run": "run1",
+        "lab_completed": true,
+        "sensor_frames": 660,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[30, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.9894847388358219,
+        "gain_rise_frames_median": 0,
+        "screen_step_fraction_median": 0.9766595046929775,
+        "screen_rise_s_median": 0.0
+      },
+      {
+        "run": "run2",
+        "lab_completed": true,
+        "sensor_frames": 660,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[30, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.9894847388358219,
+        "gain_rise_frames_median": 0,
+        "screen_step_fraction_median": 0.02304408544582586,
+        "screen_rise_s_median": 0.0
+      },
+      {
+        "run": "run3",
+        "lab_completed": true,
+        "sensor_frames": 660,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[30, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.9894847388358219,
+        "gain_rise_frames_median": 0,
+        "screen_step_fraction_median": 0.9871030183633089,
+        "screen_rise_s_median": 0.0
+      }
+    ],
+    "n": 3,
+    "invalid_runs": [],
+    "gain_step_fraction_median": 0.9894847388358219,
+    "gain_rise_frames_median": 0,
+    "screen_step_fraction_median": 0.9766595046929775,
+    "screen_rise_s_median": 0.0
+  },
+  {
+    "config": "v30-ae-gl",
+    "runs": [
+      {
+        "run": "run1",
+        "lab_completed": true,
+        "sensor_frames": 660,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.9894847388358219,
+        "gain_rise_frames_median": 0,
+        "screen_step_fraction_median": 0.9888664312398515,
+        "screen_rise_s_median": 0.0
+      },
+      {
+        "run": "run2",
+        "lab_completed": true,
+        "sensor_frames": 660,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.9894847388358219,
+        "gain_rise_frames_median": 0,
+        "screen_step_fraction_median": 0.9877602729344745,
+        "screen_rise_s_median": 0.0
+      },
+      {
+        "run": "run3",
+        "lab_completed": true,
+        "sensor_frames": 660,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.9894847388358219,
+        "gain_rise_frames_median": 0,
+        "screen_step_fraction_median": 0.9890331667267824,
+        "screen_rise_s_median": 0.0
+      }
+    ],
+    "n": 3,
+    "invalid_runs": [],
+    "gain_step_fraction_median": 0.9894847388358219,
+    "gain_rise_frames_median": 0,
+    "screen_step_fraction_median": 0.9888664312398515,
+    "screen_rise_s_median": 0.0
+  },
+  {
+    "config": "v31-ae-custom5-full",
+    "runs": [],
+    "n": 0,
+    "invalid_runs": [],
+    "gain_step_fraction_median": null,
+    "gain_rise_frames_median": null,
+    "screen_step_fraction_median": null,
+    "screen_rise_s_median": null
+  },
+  {
+    "config": "v31-ae-id2-normal",
+    "runs": [
+      {
+        "run": "run1",
+        "lab_completed": true,
+        "sensor_frames": 659,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.9626105927778962,
+        "gain_rise_frames_median": 0,
+        "screen_step_fraction_median": 0.967545701494462,
+        "screen_rise_s_median": 0.0
+      }
+    ],
+    "n": 1,
+    "invalid_runs": [],
+    "gain_step_fraction_median": 0.9626105927778962,
+    "gain_rise_frames_median": 0,
+    "screen_step_fraction_median": 0.967545701494462,
+    "screen_rise_s_median": 0.0
+  },
+  {
+    "config": "v33-ae-50hz",
+    "runs": [
+      {
+        "run": "run1",
+        "lab_completed": true,
+        "sensor_frames": 660,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.5944713782028569,
+        "gain_rise_frames_median": 13,
+        "screen_step_fraction_median": 0.6365429799530085,
+        "screen_rise_s_median": 0.462078
+      },
+      {
+        "run": "run2",
+        "lab_completed": true,
+        "sensor_frames": 659,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.5934843326219843,
+        "gain_rise_frames_median": 13,
+        "screen_step_fraction_median": 0.6299438555709778,
+        "screen_rise_s_median": 0.47835500000000053
+      },
+      {
+        "run": "run4",
+        "lab_completed": true,
+        "sensor_frames": 660,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.5360463678116626,
+        "gain_rise_frames_median": 17,
+        "screen_step_fraction_median": 0.6102929407971497,
+        "screen_rise_s_median": 0.594322
+      }
+    ],
+    "n": 3,
+    "invalid_runs": [
+      {
+        "run": "run3",
+        "lab_completed": false,
+        "interrupted": true,
+        "focused_end": null,
+        "frames": 623,
+        "paired_2ev_transitions": 0
+      }
+    ],
+    "gain_step_fraction_median": 0.5934843326219843,
+    "gain_rise_frames_median": 13,
+    "screen_step_fraction_median": 0.6299438555709778,
+    "screen_rise_s_median": 0.47835500000000053
+  },
+  {
+    "config": "v33-ae-60hz",
+    "runs": [
+      {
+        "run": "run1",
+        "lab_completed": true,
+        "sensor_frames": 659,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.5330807591030792,
+        "gain_rise_frames_median": 16,
+        "screen_step_fraction_median": 0.6080002415307476,
+        "screen_rise_s_median": 0.6108659999999997
+      },
+      {
+        "run": "run2",
+        "lab_completed": true,
+        "sensor_frames": 660,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.6819474180642531,
+        "gain_rise_frames_median": 12,
+        "screen_step_fraction_median": 0.7076902709930233,
+        "screen_rise_s_median": 0.39654400000000045
+      },
+      {
+        "run": "run3",
+        "lab_completed": true,
+        "sensor_frames": 659,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.5353842110938516,
+        "gain_rise_frames_median": 17,
+        "screen_step_fraction_median": 0.6325994729440683,
+        "screen_rise_s_median": 0.528243999999999
+      }
+    ],
+    "n": 3,
+    "invalid_runs": [],
+    "gain_step_fraction_median": 0.5353842110938516,
+    "gain_rise_frames_median": 16,
+    "screen_step_fraction_median": 0.6325994729440683,
+    "screen_rise_s_median": 0.528243999999999
+  },
+  {
+    "config": "v33-ae-60hz-nogl",
+    "runs": [],
+    "n": 0,
+    "invalid_runs": [],
+    "gain_step_fraction_median": null,
+    "gain_rise_frames_median": null,
+    "screen_step_fraction_median": null,
+    "screen_rise_s_median": null
+  },
+  {
+    "config": "v33-ae-auto",
+    "runs": [
+      {
+        "run": "run1",
+        "lab_completed": true,
+        "sensor_frames": 659,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.9616569706888357,
+        "gain_rise_frames_median": 0,
+        "screen_step_fraction_median": 0.9890127910790423,
+        "screen_rise_s_median": 0.0
+      },
+      {
+        "run": "run2",
+        "lab_completed": true,
+        "sensor_frames": 659,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 5
+        },
+        "gain_step_fraction_median": 0.9893291875442566,
+        "gain_rise_frames_median": 0,
+        "screen_step_fraction_median": 0.9900775773648629,
+        "screen_rise_s_median": 0.0
+      },
+      {
+        "run": "run3",
+        "lab_completed": true,
+        "sensor_frames": 659,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.989291451342937,
+        "gain_rise_frames_median": 0,
+        "screen_step_fraction_median": 0.9884180939111009,
+        "screen_rise_s_median": 0.0
+      }
+    ],
+    "n": 3,
+    "invalid_runs": [],
+    "gain_step_fraction_median": 0.989291451342937,
+    "gain_rise_frames_median": 0,
+    "screen_step_fraction_median": 0.9890127910790423,
+    "screen_rise_s_median": 0.0
+  },
+  {
+    "config": "v33-ae-id2-custom",
+    "runs": [
+      {
+        "run": "run1",
+        "lab_completed": true,
+        "sensor_frames": 629,
+        "mode": [
+          "CUSTOM (36866) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.6375628630277624,
+        "gain_rise_frames_median": 48,
+        "screen_step_fraction_median": 0.8068840471205756,
+        "screen_rise_s_median": 0.4447220000000005
+      },
+      {
+        "run": "run2",
+        "lab_completed": true,
+        "sensor_frames": 629,
+        "mode": [
+          "CUSTOM (36866) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.5738640078327529,
+        "gain_rise_frames_median": 45,
+        "screen_step_fraction_median": 0.7516525093752592,
+        "screen_rise_s_median": 0.8402780000000014
+      },
+      {
+        "run": "run3",
+        "lab_completed": true,
+        "sensor_frames": 629,
+        "mode": [
+          "CUSTOM (36866) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.6101627013599484,
+        "gain_rise_frames_median": 45,
+        "screen_step_fraction_median": 0.8206713362339281,
+        "screen_rise_s_median": 0.34788900000000034
+      }
+    ],
+    "n": 3,
+    "invalid_runs": [],
+    "gain_step_fraction_median": 0.6101627013599484,
+    "gain_rise_frames_median": 45,
+    "screen_step_fraction_median": 0.8068840471205756,
+    "screen_rise_s_median": 0.4447220000000005
+  },
+  {
+    "config": "v33-ae-id2-normal",
+    "runs": [
+      {
+        "run": "run1",
+        "lab_completed": true,
+        "sensor_frames": 660,
+        "mode": [
+          "NORMAL (0) "
+        ],
+        "fps": [
+          "[14, 30]"
+        ],
+        "submissions": {
+          "LAB:setRepeatingRequest": 6
+        },
+        "gain_step_fraction_median": 0.5819450970099025,
+        "gain_rise_frames_median": 27,
+        "screen_step_fraction_median": 0.685918633165621,
+        "screen_rise_s_median": 0.8088110000000004
+      }
+    ],
+    "n": 1,
+    "invalid_runs": [],
+    "gain_step_fraction_median": 0.5819450970099025,
+    "gain_rise_frames_median": 27,
+    "screen_step_fraction_median": 0.685918633165621,
+    "screen_rise_s_median": 0.8088110000000004
+  }
+]
