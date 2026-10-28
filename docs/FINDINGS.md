@@ -26,7 +26,7 @@ different package name so both can coexist.
 
 ## Where the difference is
 - Stock camera session: vendor operation mode CUSTOM (36866 = 0x9002). Port: forced to NORMAL/REGULAR (0x8001) because some camera ids lack the Xiaomi vendor
-  characteristic keys that the original code path expects. This is the largest *structural* difference found; whether it matters for the flashes is untested.
+  characteristic keys that the original code path expects. This is a major structural difference; see the later controlled static-window observations below.
 - Request-tag differences between stock and port are small (a handful of vendor tags; value diffs: face-detect FULL vs SIMPLE, in-sensor zoom, motion capture).
 
 ## EV step response (AE reaction)
@@ -54,6 +54,14 @@ A diagnostic build added optional sampling of the existing YUV preview plane and
 One exploratory default run with a smaller, instantaneous −0.5 to +0.5 EV stimulus gave a median exposure×ISO step fraction of 1.0 and a 10–90% rise within one sampled interval. This is n=1, not a replicated comparison against the previous build or a controlled physical-light stimulus. One 21-second static run detected no isolated flashes in YUV, OES or output; n=1 with no events cannot establish that the flicker is fixed or localize its cause.
 
 The previously observed differences between experimental rounds need not be caused by overlapping controllers or protocol alone: scene brightness and exposure conditions also differed. OES observations exclude only a cause exclusively downstream of the measured OES point, not all rendering or conversion causes. A stock UI swipe and an instantaneous request are not equivalent stimuli.
+
+## 2026-10-28 — replicated diagnostic build and stream experiment
+
+With the same instantaneous ±1 EV request protocol, three diagnostic-build default runs gave per-run median exposure×ISO step fractions 1.000, 0.949 and 0.940 (10–90% rise within one sampled interval in all three). The previous build's default runs were 1.010, 1.000 and 1.000. These are not controlled physical-light tests or simultaneous comparisons, and do not demonstrate a gradual fix.
+
+In approximately 20–22 s static windows, diagnostic-build default OES isolated-flash counts were 4, 0, 0; exposure×ISO varied by 3.274, 0.043, 0.021 EV, respectively. Three id-2 NORMAL and three id-2 CUSTOM windows each had 0 OES flashes under this detector; with no events in the NORMAL baseline, these samples cannot show that CUSTOM eliminates flashes. The id-2 profiles also differ in more than just session mode.
+
+A public ImageReader CPU-only usage request plus CUSTOM mode produced 0 OES flashes in three sampled windows, but the last camera configuration snapshot lacked an operation-mode entry, so CUSTOM was verified only in the first two. Despite the 0x3 reader request being logged, the HAL reported combined YUV stream usage 0x20003 in the first run: stock-equivalent stream flags were not achieved. The phone readiness gate subsequently failed and testing stopped. These observations do not establish a flicker fix; the tested windows, light, exposure, detector and stream stage limit the conclusion.
 
 ## Open questions
 - Does explicit antibanding or the CUSTOM operation mode also remove the isolated single-frame flashes at constant exposure, or only change the AE ramp?
