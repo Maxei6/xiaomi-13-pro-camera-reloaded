@@ -1,11 +1,30 @@
-# Xiaomi 13 Pro camera: brightness flicker & OEM-camera port research
+# Xiaomi 13 Pro — Camera Reloaded
 
-Field notes, measurement tools and test code from an attempt to run a re-signed, re-packaged build of the
-Xiaomi camera app on a **Xiaomi 13 Pro (nuwa), HyperOS 3 / Android 16**, next to the stock app — and to find out
-why the preview **flickers / changes brightness in steps instead of smoothly** when the scene light changes.
+**The Xiaomi 13 Pro has one of the best phone camera sensors of its generation (1-inch class Sony IMX989). The software around it is where it falls short:
+photos that got worse after updates, a preview that pumps and flickers when the light changes, a pipeline you cannot inspect or fix.**
+This project is an attempt to take that back: understand exactly what the stock camera software does, find what it does badly, and build a camera app that does it better — and to document
+every step publicly so other owners with the same problems can use it.
 
-> **Status: work in progress, not solved.** Everything below is what was *measured*; unproven ideas are labelled as such.
-> Updated as the investigation continues. If you have the same problem, the methods and numbers here should save you time.
+## Purpose
+1. **A better camera app for the Xiaomi 13 Pro (nuwa).** Start from the camera app of an early, well-behaved software version (reverse engineered from firmware you own),
+   re-package it with its **own signature and package name** so it installs *next to* the stock Camera instead of replacing it, keep the vendor libraries it needs,
+   and replace or fix the parts that are weak. Only public Android APIs in the code we add (no hidden-API hacks).
+2. **Find and fix the real causes of the bad behaviour, with evidence.** Every claim in this repo comes from a measurement (per-frame Camera2 results, screen-recording luma,
+   A/B against the stock app, a plain Camera2 control app). Ideas that failed are documented as carefully as ideas that worked.
+3. **Help other people with the same problem.** If your Xiaomi/HyperOS camera preview flickers, brightness jumps in steps instead of ramping, or photo quality dropped after an update,
+   the methods, scripts and findings here are meant to save you weeks. Measurements from other devices are very welcome.
+4. **Improve quality beyond fixing bugs**, where the hardware allows it: full-resolution captures (the sensor delivers 12.5 MP binned through the public API; 50 MP is a vendor-only path),
+   RAW/DNG output, multi-frame merging and a smoother, faster UI — each one judged by A/B numbers, never by promises.
+
+## What it is not
+- Not a Xiaomi release, not affiliated with Xiaomi, and **no Xiaomi binaries, firmware or keys are distributed here** (see [NOTICE](NOTICE.md)). You extract the app from firmware you are entitled to use.
+- Not "100× better than stock": that cannot be measured. The goal is measurable improvements on a defined list of metrics.
+- Not finished. Current state is below.
+
+## Status (honest)
+- The OEM-camera port installs, opens the main camera and ultrawide/tele, previews, focuses smoothly and saves photos.
+- **Preview brightness flicker is not solved yet** — it is the first problem being closed; the investigation so far is in `docs/FINDINGS.md`.
+- Photo resolution/quality work (full 12.5 MP, RAW, merging) has not started; it follows the flicker fix.
 
 ## Who this is for
 - You see the camera preview "pump" or jump in brightness (not a smooth ramp) on a recent Xiaomi/HyperOS phone, especially in
