@@ -1,4 +1,4 @@
-# Findings log (Xiaomi 13 Pro, HyperOS 3 / Android 16)
+# Findings log (Xiaomi 13 Pro, HyperOS 3 / Android 16) — currently covers the preview-flicker chapter
 
 Device: Xiaomi 13 Pro (nuwa), IMX989 main sensor (HAL camera id 2), Qualcomm CamX HAL. Stock camera: 6.4.x. Ported app: camera 4.5.x re-signed with a
 different package name so both can coexist.
