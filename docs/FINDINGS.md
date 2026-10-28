@@ -29,21 +29,23 @@ different package name so both can coexist.
   characteristic keys that the original code path expects. This is the largest *structural* difference found; whether it matters for the flashes is untested.
 - Request-tag differences between stock and port are small (a handful of vendor tags; value diffs: face-detect FULL vs SIMPLE, in-sensor zoom, motion capture).
 
-## EV step response (AE reaction), `data/exclusive-summary.json`
-Instantaneous compensation change −6 ↔ +6, sensor-side "gain" fraction reached in one sample interval and 10→90 % rise:
+## EV step response (AE reaction)
+Instantaneous compensation change, "gain" (exposure x ISO) fraction reached within one sample interval and 10-90 % rise.
 
-| Configuration (port) | n | step fraction (1 frame) | rise (frames) |
+**Round 2 (exploratory, several controllers overlapped, mostly n=1-3, ±6 EV steps):** some settings (explicit 50/60 Hz antibanding, op-mode CUSTOM on id 2) appeared
+to ramp over ~13-45 frames (step fraction ≈ 0.54-0.61) while the default applied ≈ 99 % in one frame.
+
+**Round 3 (single controller, same protocol, n=3 per configuration, ±1 EV steps) — this did NOT reproduce:**
+
+| Configuration (port, build v33) | n | gain step fraction | rise |
 |---|---|---|---|
-| default AE, NORMAL op-mode, FPS [14,30] | 3 | ≈ 0.99 | 0 |
-| FPS fixed [30,30] | 3 | ≈ 0.99 | 0 |
-| explicit antibanding 50 Hz | 3 | ≈ 0.59 | 13 |
-| explicit antibanding 60 Hz | 3 | ≈ 0.54 | 16 |
-| op-mode CUSTOM on camera id 2 | 3 | ≈ 0.61 | 45 |
-| antibanding AUTO (lab switch) | 3 | ≈ 0.99 | 0 |
+| default AE | 3 | 1.00 / 1.00 / 1.01 | 0 s |
+| antibanding 60 Hz | 3 | 1.00 / 1.00 / 1.01 | 0 s |
+| id 2 NORMAL op-mode | 3 | 0.97 / 0.97 / 0.97 | 0 s |
+| id 2 CUSTOM op-mode | 3 | 0.99 / 0.99 / 0.99 | 0 s |
 
-Reading: with default settings the AE applies a brightness change in **one frame**, which matches the "steps instead of ramp" the eye sees.
-Settings that change how the HAL treats AE (explicit antibanding, a different operation mode) produce a gradual response. **Caveats:** small *n*, stimulus is a
-forced EV step (not a physical light change), and the stock camera was driven with a different protocol, so this shows a plausible mechanism, not a proven cause or a fix.
+Conclusion for now: **no AE setting tried so far makes the port ramp like the stock camera**; the earlier "gradual" results were an artefact of protocol/overlap, not a finding.
+Lesson: never trust an A/B result with n=1 or from overlapped runs (see METHOD.md). The stock camera was driven with a different stimulus (UI slider), so even a gradual stock ramp is not a like-for-like reference.
 
 ## Open questions
 - Does explicit antibanding or the CUSTOM operation mode also remove the isolated single-frame flashes at constant exposure, or only change the AE ramp?

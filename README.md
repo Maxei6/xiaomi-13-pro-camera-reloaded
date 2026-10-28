@@ -58,7 +58,7 @@ every step publicly so other owners with the same problems can use it.
 2. A plain Camera2 app on the same phone and scene shows no jumps; the stock camera none either.
 3. The jumps are already present on the camera texture before any app-side rendering, so the app renderer is not the origin.
 4. Request tags, HDR/LLS/ASD flags and Xiaomi vendor tags did not remove the flashes.
-5. The way auto-exposure reacts to brightness changes differs (one frame vs a gradual ramp depending on settings). Numbers and caveats: `docs/FINDINGS.md`.
+5. In controlled repeats (single controller, n=3), every AE configuration tried applies a brightness step in a single frame; an earlier "gradual" result did not reproduce. See `docs/FINDINGS.md`.
 
 ## Quick start (measure your own phone)
 ```bash
