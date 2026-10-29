@@ -63,6 +63,10 @@ In approximately 20–22 s static windows, diagnostic-build default OES isolated
 
 A public ImageReader CPU-only usage request plus CUSTOM mode produced 0 OES flashes in three sampled windows, but the last camera configuration snapshot lacked an operation-mode entry, so CUSTOM was verified only in the first two. Despite the 0x3 reader request being logged, the HAL reported combined YUV stream usage 0x20003 in the first run: stock-equivalent stream flags were not achieved. The phone readiness gate subsequently failed and testing stopped. These observations do not establish a flicker fix; the tested windows, light, exposure, detector and stream stage limit the conclusion.
 
+## 2026-10-29 — replication not performed
+
+The planned alternating three-run screen-recording comparison could not start because the test device was offline. No new flicker measurements or fix were obtained; earlier findings remain unchanged and the reported repeated brightness oscillation remains unverified under that protocol.
+
 ## Open questions
 - Does explicit antibanding or the CUSTOM operation mode also remove the isolated single-frame flashes at constant exposure, or only change the AE ramp?
 - Is the flash a tone-mapping / digital-gain / OES-conversion effect in the HAL (not exposed in `CaptureResult`)?
