@@ -67,6 +67,12 @@ A public ImageReader CPU-only usage request plus CUSTOM mode produced 0 OES flas
 
 The planned alternating three-run screen-recording comparison could not start because the test device was offline. No new flicker measurements or fix were obtained; earlier findings remain unchanged and the reported repeated brightness oscillation remains unverified under that protocol.
 
+## 2026-10-29 — alternating screen-recording replication
+
+A later retry completed six alternating 8-second screen recordings with the default diagnostic build: port jump counts were 2, 21, 0; stock counts were 0, 0, 0 (n=3 each; threshold >1.5 luma). This reproduces the difference in one port trial, not consistently; neither a fix nor a stable port-only oscillation is established. Mean preview luma differed across trials, and matching the scene, framing and motion was not independently verified. The crop was full width and 10–70% of display height, scaled to 64×64; it may include UI.
+
+After linear detrending, the strongest discrete Fourier component in the 0.2–3 s band had port periods 1.962, 2.642, 2.640 s and amplitudes 0.122, 0.236, 0.164 luma; stock periods 2.642, 1.981, 2.640 s and amplitudes 0.557, 0.043, 0.827 luma. Selecting the strongest bin does not establish a genuine recurring cycle: the records are short and slow components can represent drift. Port capture-result exposure×ISO varied by 0.02279, 0, 0 EV peak-to-peak over the logged recording windows. This does not establish what caused the screen changes or the user-observed flicker. Frame timestamp muxer warnings were emitted during raw extraction; frame counts matched the probe, but timing results should be treated cautiously. No switch comparison was justified by these inconclusive baseline results.
+
 ## Open questions
 - Does explicit antibanding or the CUSTOM operation mode also remove the isolated single-frame flashes at constant exposure, or only change the AE ramp?
 - Is the flash a tone-mapping / digital-gain / OES-conversion effect in the HAL (not exposed in `CaptureResult`)?
